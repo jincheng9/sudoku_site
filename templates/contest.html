@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数独大赛报名</title>
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="static/bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="static/bootstrap/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/bootstrap/css/creative.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <strong>深港澳台数独联赛报名</strong><br><br>
+        <form name="input" action="/contest/apply/" method="POST">{% csrf_token %}
+            姓名 <input type="text" name="name"><br><br>
+            性别 <input type="radio" name="sex", value="male">男<input type="radio" name="sex", value="female">女<br><br>
+            手机 <input type="text" name="mobile"><br><br>
+            学校 <input type="text" name="company"><br><br>
+            年龄 <input type="text" name="age"><br><br>
+            邮箱 <input type="text" name="email"><br><br>
+            <input type="submit" value="报名">
+        </form>
+    </center>
+</body>
+</html>
